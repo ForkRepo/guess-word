@@ -6,7 +6,7 @@ function debounce(fn) {
 
     timer = setTimeout(() => {
       fn.apply(this, arguments);
-    }, 100);
+    }, 150);
   };
 };
 

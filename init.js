@@ -4,10 +4,10 @@ var currentIndex = -1;
 
 var font = {
   fontSize: 200,
-  fontFamily: '',
-  fontWeight: 'bold',
-  fontStyle: '',
-  fontVariant: '',
+  fontFamily: "",
+  fontWeight: "bold",
+  fontStyle: "",
+  fontVariant: "",
 }
 
 function getTextFontSize(text) {
@@ -19,7 +19,7 @@ function updateWord(index) {
   var word = words[index];
   container.innerHTML = word;
   // 自适应字体大小
-  container.style.fontSize = getTextFontSize(word) + 'px';
+  container.style.fontSize = getTextFontSize(word) + "px";
 }
 
 function nextWord() {
@@ -43,7 +43,7 @@ function previousWord() {
 nextWord();
 
 alert(
-  '点击屏幕右边切换到下一个词，\n点击屏幕左边切换到上一个词，\n目前一共有' + words.length + '个词语。'
+  "点击屏幕右边切换到下一个词，\n点击屏幕左边切换到上一个词，\n目前一共有" + words.length + "个词语。"
 );
 
 var onClickWithDebounce = debounce(function onClick(e) {
@@ -59,6 +59,12 @@ var onClickWithDebounce = debounce(function onClick(e) {
 // 事件，pc 和 mobile
 window.addEventListener("click", onClickWithDebounce);
 window.addEventListener("touchstart", onClickWithDebounce);
+window.addEventListener("gesturestart", function (e) {
+  e.preventDefault();
+});
+window.addEventListener("dblclick", function (e) {
+  e.preventDefault();
+})
 
 window.addEventListener("keydown", function(e) {
   if (e.key === "Enter") {
