@@ -51,7 +51,7 @@ function measureTextByDOM(text, font) {
   // 先创建 span
   var span = createSpan();
 
-  span.style.fontSize = `${font.fontSize}px`;
+  span.style.fontSize = font.fontSize + 'px';
   span.style.fontFamily = font.fontFamily;
   span.style.fontWeight = font.fontWeight;
   span.style.fontStyle = font.fontStyle;

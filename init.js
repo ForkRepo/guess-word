@@ -43,7 +43,7 @@ function previousWord() {
 nextWord();
 
 alert(
-  `点击屏幕右边切换到下一个词，\n点击屏幕左边切换到上一个词，\n目前一共有${words.length}个词语。`
+  '点击屏幕右边切换到下一个词，\n点击屏幕左边切换到上一个词，\n目前一共有' + words.length + '个词语。'
 );
 
 var onClickWithDebounce = debounce(function onClick(e) {
