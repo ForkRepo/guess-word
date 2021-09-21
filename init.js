@@ -11,7 +11,7 @@ var font = {
 }
 
 function getTextFontSize(text) {
-  const width = measureTextByDOM(text, font);
+  var width = measureTextByDOM(text, font);
   return window.innerWidth * 0.8 / width * font.fontSize;
 }
 

@@ -13,8 +13,8 @@ function debounce(fn) {
 function unique(list) {
   var arr = [];
   var map = {};
-  for (let i = 0; i < list.length; i++) {
-    const element = list[i];
+  for (var i = 0; i < list.length; i++) {
+    var element = list[i];
     if (!map[element]) {
       arr.push(element);
       map[element] = 1;
