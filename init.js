@@ -47,6 +47,8 @@ alert(
 );
 
 var onClickWithDebounce = debounce(function onClick(e) {
+  e.preventDefault();
+
   if (e.pageX < window.innerWidth / 2) {
     previousWord();
   } else {
